@@ -1,0 +1,6 @@
+MENU para programa VENTAS
+Eliga una de las opciones siguientes:
+Ingrese 1: Ver Ventas
+Ingrese 2: Ver todas las Ventas
+Ingrese 3: Agregar Ventas
+Ingrese 4: Para SALIR del menu

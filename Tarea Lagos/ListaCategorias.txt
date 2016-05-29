@@ -1,0 +1,7 @@
+MENU para ADMINITRADOR DE CATEGORIAS
+Eliga una de las opciones siguientes:
+Ingrese 1: Detalles de una Categoria
+Ingrese 2: Agregar una Categoria
+Ingrese 3: Eliminar una Categoria
+Ingrese 4: Para SALIR del menu
+

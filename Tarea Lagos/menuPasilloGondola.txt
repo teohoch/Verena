@@ -1,0 +1,11 @@
+MENU para programa ADMINISTRAR PASILLO Y GONDOLA
+Eliga una de las opciones siguientes:
+Ingrese 1: Agregar Pasillo
+Ingrese 2: Editar Categoria
+Ingrese 3: Agregar Gondola
+Ingrese 4: Asignar Gondola
+Ingrese 5: Administrar Gondolas preferenciales
+Ingrese 6: Ver ubicaciones
+Ingrese 7: Eliminar Gondola
+Ingrese 8: Editar asignacion producto
+Ingrese 9: para SALIR del menu

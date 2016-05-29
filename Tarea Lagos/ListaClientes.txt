@@ -1,0 +1,8 @@
+MENU para ADMINITRADOR DE CLIENTES
+Eliga una de las opciones siguientes:
+Ingrese 1: Detalles del Cliente
+Ingrese 2: Agregar un Cliente
+Ingrese 3: Editar  un Cliente
+Ingrese 4: Eliminar un Cliente
+Ingrese 5: Para SALIR del menu
+

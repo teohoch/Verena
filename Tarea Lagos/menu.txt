@@ -1,0 +1,9 @@
+MENU para programa SUPERMERCADO
+Eliga una de las opciones siguientes:
+Ingrese 1: Administrar Productos
+Ingrese 2: Administrar Categorias
+Ingrese 3: Administrar Local
+Ingrese 4: Administrar Pasillos y Gondolas
+Ingrese 5: Administrar Clientes 
+Ingrese 6: Administrar Ventas
+Ingrese 7: para SALIR del menu

@@ -1,0 +1,8 @@
+MENU para ADMINITRADOR DE LOCALES 
+Eliga una de las opciones siguientes:
+Ingrese 1: Detalles de un Local
+Ingrese 2: Agregar un Local
+Ingrese 3: Eliminar un Local
+Ingrese 4: Ubicacion de un Local
+Ingrese 5: Para SALIR del menu
+

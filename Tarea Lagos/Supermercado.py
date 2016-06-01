@@ -590,6 +590,8 @@ while True:
                         cur.close()
 
                         
+
+                        
                     #OPCION 2: VER TODAS LAS VENTAS
                     elif pregunta==2:
                         pass

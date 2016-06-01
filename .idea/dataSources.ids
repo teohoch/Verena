@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="PostgreSQL - grupo12@icc.uandes.cl" uuid="1586e34e-2b81-419e-a423-6e84062df7b8">
+    <database-info product="PostgreSQL" version="9.3.9" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.5">
+      <database id="1" name="grupo12"/>
+      <schema id="2" parent="1" name="public">
+        <object-id>2200</object-id>
+        <comment>standard public schema</comment>
+        <introspection-state-number>43854</introspection-state-number>
+        <introspection-timestamp>2016-06-01.10:45:55.291</introspection-timestamp>
+      </schema>
+      <sequence id="3" parent="2" name="venta_id_seq">
+        <object-id>155739</object-id>
+        <state-number>43848</state-number>
+      </sequence>
+      <sequence id="4" parent="2" name="venta_producto_id_seq">
+        <object-id>155747</object-id>
+        <state-number>43849</state-number>
+      </sequence>
+      <table id="5" parent="2" name="cajero">
+        <object-id>155509</object-id>
+        <state-number>43850</state-number>
+      </table>
+      <table id="6" parent="2" name="categoria">
+        <object-id>155484</object-id>
+        <state-number>43703</state-number>
+      </table>
+      <table id="7" parent="2" name="cliente">
+        <object-id>155499</object-id>
+        <state-number>43852</state-number>
+      </table>
+      <table id="8" parent="2" name="gondola">
+        <object-id>155479</object-id>
+        <state-number>43703</state-number>
+      </table>
+      <table id="9" parent="2" name="gondola_producto">
+        <object-id>155514</object-id>
+        <state-number>43703</state-number>
+      </table>
+      <table id="10" parent="2" name="local">
+        <object-id>155469</object-id>
+        <state-number>43851</state-number>
+      </table>
+      <table id="11" parent="2" name="movimiento">
+        <object-id>155524</object-id>
+        <state-number>43703</state-number>
+      </table>
+      <table id="12" parent="2" name="pasillo">
+        <object-id>155474</object-id>
+        <state-number>43703</state-number>
+      </table>
+      <table id="13" parent="2" name="producto">
+        <object-id>155494</object-id>
+        <state-number>43853</state-number>
+      </table>
+      <table id="14" parent="2" name="promocion">
+        <object-id>155519</object-id>
+        <state-number>43703</state-number>
+      </table>
+      <table id="15" parent="2" name="tamano">
+        <object-id>155489</object-id>
+        <state-number>43703</state-number>
+      </table>
+      <table id="16" parent="2" name="venta">
+        <object-id>155741</object-id>
+        <state-number>43854</state-number>
+      </table>
+      <table id="17" parent="2" name="venta_producto">
+        <object-id>155749</object-id>
+        <state-number>43854</state-number>
+      </table>
+      <column id="18" parent="5" name="rut_cajero">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="19" parent="5" name="id_local">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="20" parent="5" name="nombre">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="21" parent="5" name="apellido">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="22" parent="5" name="hora_inicio">
+        <state-number>43703</state-number>
+        <data-type>time</data-type>
+      </column>
+      <column id="23" parent="5" name="hora_fin">
+        <state-number>43703</state-number>
+        <data-type>time</data-type>
+      </column>
+      <column id="24" parent="5" name="sueldo">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <index id="25" parent="5" name="cajero_pkey">
+        <object-id>155512</object-id>
+        <columns>rut_cajero</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="26" parent="5" name="cajero_pkey">
+        <columns>rut_cajero</columns>
+        <underlying-index>cajero_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="27" parent="5" name="id_local_fk">
+        <columns>id_local</columns>
+        <ref-key>~.local.local_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="28" parent="6" name="id_categoria">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="29" parent="6" name="nombre">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="30" parent="6" name="cantidad_cambios">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <index id="31" parent="6" name="categoria_pkey">
+        <object-id>155487</object-id>
+        <columns>id_categoria</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="32" parent="6" name="categoria_pkey">
+        <columns>id_categoria</columns>
+        <underlying-index>categoria_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="33" parent="7" name="rut_cliente">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="34" parent="7" name="nombre">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="35" parent="7" name="apellido">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="36" parent="7" name="fecha_nacimiento">
+        <state-number>43703</state-number>
+        <data-type>date</data-type>
+      </column>
+      <column id="37" parent="7" name="comuna_trabajo">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="38" parent="7" name="comuna_residencia">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="39" parent="7" name="cliente_pkey">
+        <object-id>155502</object-id>
+        <columns>rut_cliente</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="40" parent="7" name="cliente_pkey">
+        <columns>rut_cliente</columns>
+        <underlying-index>cliente_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="41" parent="8" name="id_gondola">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="42" parent="8" name="id_pasillo">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="43" parent="8" name="nivel">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="44" parent="8" name="tipo">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="45" parent="8" name="gondola_pkey">
+        <object-id>155482</object-id>
+        <columns>id_gondola</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="46" parent="8" name="gondola_pkey">
+        <columns>id_gondola</columns>
+        <underlying-index>gondola_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="47" parent="8" name="id_pasillo_fk">
+        <columns>id_pasillo</columns>
+        <ref-key>~.pasillo.pasillo_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="48" parent="9" name="id_gondola_producto">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="49" parent="9" name="id_gondola">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="50" parent="9" name="id_producto">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="51" parent="9" name="nivel">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <index id="52" parent="9" name="gondola_producto_pkey">
+        <object-id>155517</object-id>
+        <columns>id_gondola_producto</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="53" parent="9" name="gondola_producto_pkey">
+        <columns>id_gondola_producto</columns>
+        <underlying-index>gondola_producto_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="54" parent="9" name="id_gondola_fk">
+        <columns>id_gondola</columns>
+        <ref-key>~.gondola.gondola_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="55" parent="9" name="id_producto_fk">
+        <columns>id_producto</columns>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="56" parent="10" name="id_local">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="57" parent="10" name="clasificacion">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="58" parent="10" name="direccion">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="59" parent="10" name="comuna">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="60" parent="10" name="local_pkey">
+        <object-id>155472</object-id>
+        <columns>id_local</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="61" parent="10" name="local_pkey">
+        <columns>id_local</columns>
+        <underlying-index>local_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="62" parent="11" name="id_gondola_original">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="63" parent="11" name="id_gondola_destino">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="64" parent="11" name="nivel_original">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="65" parent="11" name="nivel_destino">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="66" parent="11" name="id_producto">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="67" parent="11" name="fecha">
+        <state-number>43703</state-number>
+        <data-type>timestamp</data-type>
+      </column>
+      <index id="68" parent="11" name="movimiento_pkey">
+        <object-id>155527</object-id>
+        <columns>id_gondola_original
+id_gondola_destino
+nivel_original
+nivel_destino
+id_producto</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="69" parent="11" name="movimiento_pkey">
+        <columns>id_gondola_original
+id_gondola_destino
+nivel_original
+nivel_destino
+id_producto</columns>
+        <underlying-index>movimiento_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="70" parent="11" name="id_gondola_original_fk">
+        <columns>id_gondola_original</columns>
+        <ref-key>~.gondola.gondola_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="71" parent="11" name="id_gondola_destino_fk">
+        <columns>id_gondola_destino</columns>
+        <ref-key>~.gondola.gondola_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="72" parent="11" name="id_producto_fk">
+        <columns>id_producto</columns>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="73" parent="12" name="id_pasillo">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="74" parent="12" name="id_categoria">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="75" parent="12" name="id_local">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="76" parent="12" name="numero">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <index id="77" parent="12" name="pasillo_pkey">
+        <object-id>155477</object-id>
+        <columns>id_pasillo</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="78" parent="12" name="pasillo_pkey">
+        <columns>id_pasillo</columns>
+        <underlying-index>pasillo_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="79" parent="12" name="id_categoria_fk">
+        <columns>id_categoria</columns>
+        <ref-key>~.categoria.categoria_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="80" parent="12" name="id_local_fk">
+        <columns>id_local</columns>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="81" parent="13" name="id_producto">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="82" parent="13" name="id_categoria">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="83" parent="13" name="id_tamano">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="84" parent="13" name="nombre">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="85" parent="13" name="marca">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="86" parent="13" name="producto_pkey">
+        <object-id>155497</object-id>
+        <columns>id_producto</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="87" parent="13" name="producto_pkey">
+        <columns>id_producto</columns>
+        <underlying-index>producto_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="88" parent="13" name="id_categoria_fk">
+        <columns>id_categoria</columns>
+        <ref-key>~.categoria.categoria_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="89" parent="13" name="id_tamano_fk">
+        <columns>id_tamano</columns>
+        <ref-key>~.tamano.tamano_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="90" parent="14" name="id_promocion">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="91" parent="14" name="id_gondola">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="92" parent="14" name="descuento">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="93" parent="14" name="fecha_inicio">
+        <state-number>43703</state-number>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="94" parent="14" name="fecha_fin">
+        <state-number>43703</state-number>
+        <data-type>timestamp</data-type>
+      </column>
+      <index id="95" parent="14" name="promocion_pkey">
+        <object-id>155522</object-id>
+        <columns>id_promocion</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="96" parent="14" name="promocion_pkey">
+        <columns>id_promocion</columns>
+        <underlying-index>promocion_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="97" parent="14" name="id_gondola_fk">
+        <columns>id_gondola</columns>
+        <ref-key>~.gondola.gondola_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="98" parent="15" name="id_tamano">
+        <state-number>43703</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+      </column>
+      <column id="99" parent="15" name="cantidad">
+        <state-number>43703</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="100" parent="15" name="unidad">
+        <state-number>43703</state-number>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <index id="101" parent="15" name="tamano_pkey">
+        <object-id>155492</object-id>
+        <columns>id_tamano</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="102" parent="15" name="tamano_pkey">
+        <columns>id_tamano</columns>
+        <underlying-index>tamano_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="103" parent="16" name="id">
+        <state-number>43848</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;venta_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="104" parent="16" name="rut_cliente">
+        <state-number>43848</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="105" parent="16" name="id_local">
+        <state-number>43848</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="106" parent="16" name="fecha">
+        <state-number>43848</state-number>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="107" parent="16" name="cantidad">
+        <state-number>43848</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="108" parent="16" name="rut_cajero">
+        <state-number>43848</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <index id="109" parent="16" name="venta_pkey">
+        <object-id>155745</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="110" parent="16" name="venta_pkey">
+        <columns>id</columns>
+        <underlying-index>venta_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="111" parent="16" name="id_cliente_fk">
+        <columns>rut_cliente</columns>
+        <ref-key>~.cliente.cliente_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="112" parent="16" name="id_local_fk">
+        <columns>id_local</columns>
+        <ref-key>~.local.local_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="113" parent="16" name="id_cajero_fk">
+        <columns>rut_cajero</columns>
+        <ref-key>~.cajero.cajero_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="114" parent="17" name="id">
+        <state-number>43849</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;venta_producto_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="115" parent="17" name="id_venta">
+        <state-number>43849</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="116" parent="17" name="id_producto">
+        <state-number>43849</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="117" parent="17" name="cantidad">
+        <state-number>43849</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <index id="118" parent="17" name="venta_producto_pkey">
+        <object-id>155753</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="119" parent="17" name="venta_producto_pkey">
+        <columns>id</columns>
+        <underlying-index>venta_producto_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="120" parent="17" name="id_venta_fk">
+        <columns>id_venta</columns>
+        <ref-key>~.venta.venta_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="121" parent="17" name="id_producto_fk">
+        <columns>id_producto</columns>
+        <ref-key>~.producto.producto_pkey</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>

@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/input3.css">
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/validator.min.js"></script>
+<script src="js/input4.js"></script>
+
+
+<html>
+<head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Input1</title>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <img class=" navbar-brand img-circle" style="background-color: white; padding: 0px" alt="Brand" src="images/cap.png">
+            <p class="navbar-text"> Estado Asignatura</p>
+        </div>
+    </div>
+
+</nav>
+
+
+
+<div id="container" class="container">
+    <br>
+    <ul>
+        <row>
+                <div class="col-sm-4 col-sm-offset-4">
+                    <div class="col-sm-6">
+                        <li>
+                            <p>Su promedio es:</p>
+                        </li>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p>3.9</p>
+                    </div>
+                </div>
+        </row>
+
+        <row>
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="col-sm-12">
+                    <li>
+                        <p>Estas <span style="color: red">Reprobando</span>/<span style="color: blue">Aprobando</span> el ramo </p>
+                    </li>
+                </div>
+
+            </div>
+        </row>
+
+        <row>
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="col-sm-12">
+                    <li>
+                        <p>Nesesitas <span style="color: blue">6.9</span> notas para aprobar </p>
+                    </li>
+                </div>
+
+            </div>
+        </row>
+    </ul>
+    <row>
+        <div class="col-sm-6 col-sm-offset-3">
+            <a id="linkFacebook" href="" >
+                <div class="col-sm-2 ">
+                    <img src="images/facebook.png" alt="Facebook" class="img-responsive">
+
+                </div>
+                <div class="col-sm-10 ">
+                    <h3>
+                        Si quieres pedir ayuda haz click aqui y te conectaras con Facebook
+                    </h3>
+                </div>
+            </a>
+
+
+        </div>
+    </row>
+
+
+</div><!-- /.container -->
+
+
+
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "http://connect.facebook.net/en_US/all.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '476112355932395',  // Change appId 409742669131720 with your Facebook Application ID
+                status: true,
+                xfbml: true,
+                cookie: true
+            });
+        };
+        $("#linkFacebook").click(function () {
+            FB.ui({
+                method: 'feed',
+                quote:'¡Nesesito Ayuda academica! Interesados hablar por index',
+                hashtag:" #Nesesito-ayuda",
+                link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Sciences_humaines.svg/2000px-Sciences_humaines.svg.png',
+                picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Sciences_humaines.svg/2000px-Sciences_humaines.svg.png',
+                description: 'Nesesito Ayuda!'
+            });
+
+        })
+    });
+</script>

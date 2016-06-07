@@ -1,0 +1,8 @@
+body {
+    padding-top: 75px;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}

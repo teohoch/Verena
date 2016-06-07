@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/input2.css">
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/validator.min.js"></script>
+<script src="js/input2.js"></script>
+
+<html>
+<head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Input1</title>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img class=" navbar-brand img-circle" style="background-color: white; padding: 0px" alt="Brand" src="images/cap.png">
+            <p class="navbar-text"> Detalles Asignatura</p>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="container">
+
+    <div >
+
+        <form id="formAsignatura" role="form" action="input3.html" method="GET" data-toggle="validator"  >
+
+            <div class="form-group">
+                <label for="notaAprovatoria">Nota Aprobatoria</label>
+                <input name="notaAprobatoria" type="number" class="form-control" id="notaAprovatoria" placeholder=0 min="0" max="100" data-native-error="Por favor rellene este campo correctamente" required>
+                <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="notaReprobatoria">Nota Reprobatoria</label>
+                <input name="notaReprobatoria " type="number" class="form-control" id="notaReprobatoria" placeholder=0 data-native-error="Por favor rellene este campo correctamente" required>
+                <div class="help-block with-errors"></div>
+            </div>
+            <input id="nNotas" name="nNotas" type="hidden"  value=0>
+            <input id="asignatura" name="asignatura" type="hidden"  value="">
+            <button type="submit" class="btn btn-default">Enviar</button>
+        </form>
+    </div>
+
+</div><!-- /.container -->
+
+
+
+
+</body>
+</html>
+

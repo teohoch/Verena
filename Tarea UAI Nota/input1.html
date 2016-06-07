@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/input1.css">
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/validator.min.js"></script>
+
+<html>
+<head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Input1</title>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img class=" navbar-brand img-circle" style="background-color: white; padding: 0px" alt="Brand" src="images/cap.png">
+            <p class="navbar-text"> Agregar Asignatura</p>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4  ">
+            <img src="images/cap.png" alt="Logo" class="img-responsive">
+        </div>
+    </div>
+
+    <div >
+
+        <form id="formAsignatura" role="form" action="input2.html" method="GET" data-toggle="validator"  >
+            <div class="form-group">
+                <label for="nombreAsignatura">Asignatura</label>
+                <input name="asignatura" type="text" class="form-control" id="nombreAsignatura" placeholder="Matematicas" data-native-error="Por favor rellene este campo correctamente" required>
+                <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="nNotas">Numero de Notas</label>
+                <input name="nNotas" type="number" class="form-control" id="nNotas" placeholder=0 min="0" max="100" data-native-error="Por favor rellene este campo correctamente" required>
+                <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="nTotalNotas">Numero Total de Notas</label>
+                <input name="nTotal " type="number" class="form-control" id="nTotalNotas" placeholder=0 data-native-error="Por favor rellene este campo correctamente" required>
+                <div class="help-block with-errors"></div>
+            </div>
+            <button type="submit" class="btn btn-default">Enviar</button>
+        </form>
+    </div>
+
+</div><!-- /.container -->
+
+
+
+
+</body>
+</html>

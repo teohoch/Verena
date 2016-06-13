@@ -1,16 +1,15 @@
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/input3.css">
-<script src="bootstrap/js/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="js/validator.min.js"></script>
-<script src="js/input4.js"></script>
-
-
 <html>
 <head>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/input3.css">
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/validator.min.js"></script>
+    <script src="js/input4.js"></script>
+
     <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Input1</title>
+    <title>Resultados</title>
 </head>
 <body>
 
@@ -28,42 +27,30 @@
 
 <div id="container" class="container">
     <br>
-    <ul>
-        <row>
-                <div class="col-sm-4 col-sm-offset-4">
-                    <div class="col-sm-6">
-                        <li>
-                            <p>Su promedio es:</p>
-                        </li>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <p>3.9</p>
-                    </div>
-                </div>
-        </row>
-
-        <row>
-            <div class="col-sm-4 col-sm-offset-4">
-                <div class="col-sm-12">
+    <ul >
+        <div id="lista" class="col-sm-6 col-sm-offset-3">
+            <row>
+                <div class="col-sm-6">
                     <li>
-                        <p>Estas <span style="color: red">Reprobando</span>/<span style="color: blue">Aprobando</span> el ramo </p>
+                        <p>Su promedio es:</p>
                     </li>
                 </div>
 
-            </div>
-        </row>
+                <div class="col-sm-6">
+                    <p id="nota" style="color: black;"></p>
+                </div>
+            </row>
 
-        <row>
-            <div class="col-sm-4 col-sm-offset-4">
+            <row>
                 <div class="col-sm-12">
                     <li>
-                        <p>Nesesitas <span style="color: blue">6.9</span> notas para aprobar </p>
+                        <p id="wrap_estado">Estas <span id="estado"></span> el ramo </p>
                     </li>
                 </div>
+            </row>
+        </div>
 
-            </div>
-        </row>
+
     </ul>
     <row>
         <div class="col-sm-6 col-sm-offset-3">
@@ -106,7 +93,7 @@
 
         window.fbAsyncInit = function() {
             FB.init({
-                appId: '476112355932395',  // Change appId 409742669131720 with your Facebook Application ID
+                appId: '253797638310230',  // Change appId 409742669131720 with your Facebook Application ID
                 status: true,
                 xfbml: true,
                 cookie: true
@@ -115,7 +102,7 @@
         $("#linkFacebook").click(function () {
             FB.ui({
                 method: 'feed',
-                quote:'Â¡Nesesito Ayuda academica! Interesados hablar por index',
+                quote:'¡Nesesito Ayuda academica! Interesados hablar por index',
                 hashtag:" #Nesesito-ayuda",
                 link: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Sciences_humaines.svg/2000px-Sciences_humaines.svg.png',
                 picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Sciences_humaines.svg/2000px-Sciences_humaines.svg.png',

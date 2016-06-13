@@ -22,6 +22,65 @@ function capitalize(s)
 
 $(document).ready(function(){
 
+    var nNotas = GetURLParameter("nNotas");
+    var aprobatoria = GetURLParameter("notaAprobatoria")
+    var reprobatoria = GetURLParameter("notaReprobatoria")
+    var promedioActual = 0;
+    var porcentajeActual = 0;
+
+    for (i=0; i<nNotas; i++)
+    {
+        var tempA = parseInt(GetURLParameter("valorNota"+i))
+        var tempB = parseInt(GetURLParameter("ponderacionNota"+i))
+        promedioActual = promedioActual + (tempA * (tempB/100))
+        porcentajeActual = porcentajeActual + (tempB/100)
+    }
+
+    var nota = $("#nota")
+    var estado = $("#estado")
+    var notas_nesesarias = $("#lista")
+    nota.append(promedioActual)
+
+    if (promedioActual<reprobatoria)
+    {
+        nota.css("color","red")
+        estado.css("color","red")
+        estado.append("Reprobando")
+
+        var nesesaria = reprobatoria-promedioActual
+        var nesesaria2 = aprobatoria-promedioActual
+        var a = (nesesaria/(1-porcentajeActual)).toFixed(2)
+        var b = (nesesaria2/(1-porcentajeActual)).toFixed(2)
+        var ap = '<row>                   <div class="col-sm-12">        <li>        <p>Nesesitas <span style="color: red">{1}</span> de promedio en el resto de tus notas para no reprobar </p>    </li>    </div>    </div>    </row>'
+        var ap = ap.replace("{1}", a)
+        var ap2 = '<row>                 <div class="col-sm-12">        <li>        <p>Nesesitas <span style="color: blue">{1}</span> de promedio en el resto de tus notas para aprobar sin examen </p>    </li>    </div>    </div>    </row>'
+        var ap2 = ap2.replace("{1}", b)
+        notas_nesesarias.append(ap)
+        notas_nesesarias.append(ap2)
+    }else{
+        if (promedioActual>aprobatoria)
+        {
+            nota.css("color","blue")
+            estado.css("color","blue")
+            estado.append("Aprobando")
+        }else {
+            $("#wrap_estado").empty()
+            $("#wrap_estado").append("Debera rendir examen para pasar, pero tiene promedio mayor a la nota reprobatoria")
+
+
+            var nesesaria2 = aprobatoria-promedioActual
+
+            var b = (nesesaria2/(1-porcentajeActual)).toFixed(2)
+
+            var ap2 = '<row>                    <div class="col-sm-12">        <li>        <p>Nesesitas <span style="color: red">{1}</span> de promedio en el resto de tus notas para aprobar sin examen </p>    </li>    </div>    </div>    </row>'
+            var ap2 = ap2.replace("{1}", b)
+
+            notas_nesesarias.append(ap2)
+
+        }
+    }
+
+
 
     
 

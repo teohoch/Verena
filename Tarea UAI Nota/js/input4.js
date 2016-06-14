@@ -39,7 +39,7 @@ $(document).ready(function(){
     var nota = $("#nota")
     var estado = $("#estado")
     var notas_nesesarias = $("#lista")
-    nota.append(promedioActual)
+    nota.append(promedioActual.toFixed(2))
 
     if (promedioActual<reprobatoria)
     {
@@ -51,10 +51,28 @@ $(document).ready(function(){
         var nesesaria2 = aprobatoria-promedioActual
         var a = (nesesaria/(1-porcentajeActual)).toFixed(2)
         var b = (nesesaria2/(1-porcentajeActual)).toFixed(2)
-        var ap = '<row>                   <div class="col-sm-12">        <li>        <p>Nesesitas <span style="color: red">{1}</span> de promedio en el resto de tus notas para no reprobar </p>    </li>    </div>    </div>    </row>'
-        var ap = ap.replace("{1}", a)
-        var ap2 = '<row>                 <div class="col-sm-12">        <li>        <p>Nesesitas <span style="color: blue">{1}</span> de promedio en el resto de tus notas para aprobar sin examen </p>    </li>    </div>    </div>    </row>'
-        var ap2 = ap2.replace("{1}", b)
+
+        if(a>7.0)
+        {
+            var ap = '<row>                   <div class="col-sm-12">        <li>        <p>Lamentamos informarte que no hay forma de no reprobar este ramo con las pruebas restantes. </p>    </li>    </div>    </div>    </row>'
+        }else
+        {
+            var ap = '<row>                   <div class="col-sm-12">        <li>        <p>Nesesitas <span style="color: red">{1}</span> de promedio en el resto de tus notas para no reprobar </p>    </li>    </div>    </div>    </row>'
+            var ap = ap.replace("{1}", a)
+        }
+
+        if(b>7.0)
+        {
+            var ap2 = '<row>                 <div class="col-sm-12">        <li>        <p>No existe forma de aprobar con las notas que tienes sin el examen. </p>    </li>    </div>    </div>    </row>'
+
+        }else
+        {
+            var ap2 = '<row>                 <div class="col-sm-12">        <li>        <p>Nesesitas <span style="color: blue">{1}</span> de promedio en el resto de tus notas para aprobar sin examen </p>    </li>    </div>    </div>    </row>'
+            var ap2 = ap2.replace("{1}", b)
+        }
+
+
+
         notas_nesesarias.append(ap)
         notas_nesesarias.append(ap2)
     }else{

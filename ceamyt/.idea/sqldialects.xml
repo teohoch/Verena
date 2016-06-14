@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/Database/creacion.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/handlers" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/horarios.php" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/perfil.php" dialect="MySQL" />
+  </component>
+</project>

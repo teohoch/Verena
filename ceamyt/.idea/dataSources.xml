@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3265092577">
-    <data-source source="LOCAL" name="PostgreSQL - grupo12@icc.uandes.cl" uuid="1586e34e-2b81-419e-a423-6e84062df7b8">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://icc.uandes.cl:5432/grupo12</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="MySQL - ceamyt@192.168.2.1" uuid="4c286426-f433-4f32-bbda-b83f67531e3c">
+  <component name="DataSourceManagerImpl" format="xml" hash="2938203065">
+    <data-source source="LOCAL" name="MySQL - ceamyt@hochfarber.com" uuid="47dc9c7b-ebc4-4ee5-bbc7-41c091c007ed">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://192.168.2.1:3306/ceamyt</jdbc-url>
+      <jdbc-url>jdbc:mysql://hochfarber.com:3306/ceamyt</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

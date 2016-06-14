@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpProjectServersManager">
+    <servers>
+      <server host="localhost" id="85d2ca9c-2584-4035-81a0-5fed1687f27e" name="Testing" port="800" />
+    </servers>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7" />
+</project>
